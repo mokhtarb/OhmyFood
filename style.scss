@@ -1,12 +1,378 @@
+@import "./sass/base.scss";
+@import"./sass/layouts/header.scss";
+@import "./sass/pages/restaurants.scss";
+
+
 *, ::before, ::after{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.card img {
-    object-fit: cover;
-    width: 100%;
-    height: 9em;
-    border-radius: 20px 20px 0px 0px;
+body {
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    
+} 
+loader{
+  margin:auto;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  border: 16px solid #bdc3c7;
+  width: 120px;
+  height: 120px;
+  border-top-color: #1abc9c;
+  border-bottom-color: #3498db;
+  border-radius: 50%;
+  animation: spin 4s linear infinite;
 }
+
+@keyframes spin {
+  0%{
+    transform: rotate(0deg) scale(1);
+    border-top-color: #FF79DA;
+    border-bottom-color: #FF79DA;
+  }
+  25%{
+    border-top-color: #9356DC;
+    border-bottom-color: #9356DC;
+  }
+  50% {
+     transform: rotate(360deg) scale(1.15);
+    border-top-color: #FF79DA;
+    border-bottom-color: #FF79DA;
+  }
+  75%{
+    border-top-color: #9356DC;
+    border-bottom-color: #9356DC;
+  }
+  100%{
+     transform: rotate(720deg) scale(1);
+    border-top-color: #FF79DA;
+    border-bottom-color: #FF79DA;
+  }
+  
+}
+header {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+
+.city {
+    display: flex;
+    justify-content: center;
+    padding: 1.25rem 1rem;
+    background-color: #f3f3f3;
+    font-size: 1.2rem;
+    position: relative;
+}
+
+.resa {
+    padding: 2rem;
+    text-align: center;
+    background-color: #fafafa;
+
+}
+.resa_subtitle {
+    font-weight: 300;
+    margin: 1.5rem 0;
+}
+
+.resa_btn { 
+    border: 0;
+    padding: 0.75rem 1.5rem;
+    font-weight: 500;
+    font-size: 1.1rem;
+    border-radius: 100px;
+    color: #fff;
+    background-color: #686868;
+    background-image: linear-gradient(0deg,rgba(147,86,220,.9),rgba(255,121,218,.9));
+    cursor: pointer;
+    transition-duration: .25s;
+    box-shadow: 0.25rem 0.25rem 10px rgba(0,0,0,.25);
+}
+.resa_btn:hover {
+    background-color: #fff;
+    box-shadow: .25rem .25rem 10px rgba(0,0,0,.5)
+}
+.tuto {
+  
+
+  &__title {
+    margin-top: 0;
+  }
+
+  &__steps {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    counter-reset: compteListe;
+
+    @media (min-width:64rem) {
+      display: flex;
+    }
+  }
+
+  &__step {
+    padding: 1.5rem;
+    margin: 1rem 0 1rem 0.75rem;
+    box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125);
+    border-radius: 1.25rem;
+    background-color: #f6f6f6;
+    display: flex;
+    position: relative;
+
+    @media (min-width:64rem) {
+      flex: 1;
+      margin: 0;
+      margin-left: 2rem;
+
+      &:first-child {
+        margin-left: 0.75rem;
+      }
+    }
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &::before {
+      counter-increment: compteListe 1;
+      content: counter(compteListe) " ";
+      background: $color-primary;
+      height: 1.5rem;
+      width: 1.5rem;
+      border-radius: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      position: absolute;
+      left: -0.75rem;
+    }
+  }
+
+  &__icon {
+    margin-right: 1rem;
+    color: #7e7e7e;
+  }
+}
+
+
+.card {
+  background-color: white;
+  border-radius: 1rem;
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+
+  &__img {
+    height: 12rem;
+    width: 100%;
+    border: transparent solid 0px;
+    border-radius: 1rem 1rem 0 0;
+    box-shadow: none;
+    object-fit: cover;
+  }
+
+  &__badge {
+    background-color: $color-tertiary;
+    color: darken($color-tertiary, 50%);
+    padding: 0.5rem;
+    border-radius: 0.125rem;
+    position: absolute;
+    top: 1rem;
+    right: 0.75rem;
+  }
+
+  &__footer {
+    padding: 1rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  &__content {
+    flex: 1;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 0.25rem;
+  }
+
+  &__subtitle {
+    margin: 0;
+  }
+
+  &__btn {
+    height: 2rem;
+    width: 2rem;
+    background-color: transparent;
+    border: transparent 0px solid;
+    padding: 0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+
+  &__like {
+    background-color: white!important;
+  }
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  column-gap: 2rem;
+  row-gap: 2rem;
+
+  @media (min-width:64rem) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+      
+.restaurants {
+  background-color: #f6f6f6;
+  padding: 2rem 1rem;
+}
+
+.container {
+  max-width: 1280px;
+  margin: auto;
+  position: relative;
+}
+
+.menu {
+  margin-top: -4rem;
+  border-radius: 2rem 2rem 0 0;
+  background-color: #f6f6f6;
+  z-index: 1;
+  position: relative;
+
+  &__header {
+    padding: 1rem 2rem 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__title {
+    font-family: "Shrikhand", "cursive";
+  }
+
+  &__btn {
+    height: 2rem;
+    width: 2rem;
+    background-color: transparent;
+    border: transparent 0px solid;
+    padding: 0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor: pointer;
+    position: relative;
+    background-color: black;
+    
+    &:hover::before {
+      opacity: 1;
+    }
+    
+    &::before {
+      opacity: 0;
+      transition: 0.5s;
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background:linear-gradient(0deg, $color-primary 0%,$color-secondary 100%);
+    }
+  }
+
+  &__like {
+    transition-duration: .25s;
+    background-color: #f6f6f6;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    mix-blend-mode: lighten;
+  }
+
+  &__btn:hover {
+    .menu__like {
+      &--noBg {
+        opacity: 0;
+      }
+    }
+  }
+}
+
+
+
+
+
+.footer {
+  background-color: #353535;
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    
+  }
+  
+  &__logo {
+    color: white;
+    font-family: "Shrikhand", "cursive";
+    margin: 0;
+    font-size: 1.2rem;
+    
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__listElt {
+    margin: 0.5rem 0;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__link {
+    color: white;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__icon {
+    width: 1.2rem;
+    margin-right: 0.5rem;
+  }
+}
+
+
