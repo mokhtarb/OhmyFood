@@ -53,10 +53,15 @@ loader{
   }
   
 }
-header {
-    display: flex;
-    justify-content: center;
-    padding: 30px;
+.header {
+    
+  display: flex;
+  justify-content: center;
+  padding: 30px; 
+  
+}
+.logo{
+  width: 45%;
 }
 
 .city {
@@ -97,8 +102,8 @@ header {
     box-shadow: .25rem .25rem 10px rgba(0,0,0,.5)
 }
 .tuto {
-  
 
+  padding: 2rem 1rem;
   &__title {
     margin-top: 0;
   }
@@ -237,7 +242,16 @@ header {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-
+.card:hover {
+  -ms-transform: scale(1.019);
+  /* IE 9 */
+  -webkit-transform: scale(1.019);
+  /* Safari 3-8 */
+  transform: scale(1.015);
+}
+.card:active {
+  box-shadow: inset 0 0 10px 0 rgba(0, 0, 0, 0.25);
+}
       
 .restaurants {
   background-color: #f6f6f6;
@@ -259,9 +273,9 @@ header {
 
   &__header {
     padding: 1rem 2rem 0 1rem;
-    display: flex;
+    
     align-items: center;
-    justify-content: space-between;
+    
   }
 
   &__title {
