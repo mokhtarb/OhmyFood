@@ -1,3 +1,4 @@
+/** @format */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400&family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400&family=Shrikhand&display=swap");
 body, html {
@@ -53,7 +54,7 @@ body, html {
 
 .RestaurantImg {
   max-width: 100%;
-  max-height: 32rem;
+  max-height: 55vh;
   width: 100%;
   object-fit: cover;
 }
@@ -304,7 +305,9 @@ body, html {
   color: inherit;
 }
 
-*, ::before, ::after {
+*,
+::before,
+::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -331,26 +334,26 @@ loader {
 @keyframes spin {
   0% {
     transform: rotate(0deg) scale(1);
-    border-top-color: #FF79DA;
-    border-bottom-color: #FF79DA;
+    border-top-color: #ff79da;
+    border-bottom-color: #ff79da;
   }
   25% {
-    border-top-color: #9356DC;
-    border-bottom-color: #9356DC;
+    border-top-color: #9356dc;
+    border-bottom-color: #9356dc;
   }
   50% {
     transform: rotate(360deg) scale(1.15);
-    border-top-color: #FF79DA;
-    border-bottom-color: #FF79DA;
+    border-top-color: #ff79da;
+    border-bottom-color: #ff79da;
   }
   75% {
-    border-top-color: #9356DC;
-    border-bottom-color: #9356DC;
+    border-top-color: #9356dc;
+    border-bottom-color: #9356dc;
   }
   100% {
     transform: rotate(720deg) scale(1);
-    border-top-color: #FF79DA;
-    border-bottom-color: #FF79DA;
+    border-top-color: #ff79da;
+    border-bottom-color: #ff79da;
   }
 }
 .header {
@@ -360,7 +363,7 @@ loader {
 }
 
 .logo {
-  width: 45%;
+  width: 200px;
 }
 
 .city {
@@ -428,6 +431,10 @@ loader {
   display: flex;
   position: relative;
 }
+.tuto__step:hover {
+  transform: scale(1.01);
+  background-color: rgba(146, 86, 220, 0.1294117647);
+}
 @media (min-width: 64rem) {
   .tuto__step {
     flex: 1;
@@ -461,6 +468,10 @@ loader {
 .tuto__icon {
   margin-right: 1rem;
   color: #7e7e7e;
+  font-size: 20px;
+}
+.tuto__icon:hover {
+  color: #9356DC;
 }
 
 .card {
@@ -532,9 +543,7 @@ loader {
 
 .card:hover {
   -ms-transform: scale(1.019);
-  /* IE 9 */
   -webkit-transform: scale(1.019);
-  /* Safari 3-8 */
   transform: scale(1.015);
 }
 
@@ -613,21 +622,43 @@ loader {
 
 .footer {
   background-color: #353535;
+  padding: 20px 20px;
 }
 .footer .container {
   display: flex;
   flex-direction: column;
+}
+@media (min-width: 64rem) {
+  .footer .container {
+    flex-direction: row-reverse;
+  }
 }
 .footer__logo {
   color: white;
   font-family: "Shrikhand", "cursive";
   margin: 0;
   font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+@media (min-width: 64rem) {
+  .footer__logo {
+    padding-top: 3px;
+    padding-left: 25px;
+  }
 }
 .footer__list {
   list-style: none;
   padding: 0;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 64rem) {
+  .footer__list {
+    flex-direction: row;
+    align-items: baseline;
+    gap: 30px;
+  }
 }
 .footer__listElt {
   margin: 0.5rem 0;
