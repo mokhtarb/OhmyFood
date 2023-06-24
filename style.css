@@ -21,7 +21,8 @@ a {
   text-decoration: none;
 }
 
-body, html {
+body,
+html {
   margin: 0;
   font-family: "Roboto", sans-serif;
   scroll-behavior: smooth;
@@ -65,12 +66,23 @@ body, html {
   z-index: 1;
   position: relative;
 }
+@media (min-width: 64rem) {
+  .menu {
+    width: 80%;
+  }
+}
 
 .menu__header {
   padding: 1rem 2rem 0 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+@media (min-width: 64rem) {
+  .menu__header {
+    gap: 10px;
+    justify-content: center;
+  }
 }
 
 .menu__title {
@@ -131,14 +143,14 @@ body, html {
 
 @media (min-width: 64rem) {
   .submenus {
-    grid-template-columns: repeat(3, 1fr);
     column-gap: 1rem;
   }
 }
 .submenu {
   max-width: 100%;
   overflow: hidden;
-  padding: 0 1rem;
+  padding: 0 2rem;
+  margin-top: 20px;
 }
 
 .submenu__title {
@@ -271,43 +283,6 @@ body, html {
   animation-delay: 0.8s;
 }
 
-/*
-.delay-0 {
-  animation-delay: 0s;
-}
-
-.delay-1 {
-  animation-delay: 0.1s;
-}
-
-.delay-2 {
-  animation-delay: 0.2s;
-}
-
-.delay-3 {
-  animation-delay: 0.3s;
-}
-
-.delay-4 {
-  animation-delay: 0.4s;
-}
-
-.delay-5 {
-  animation-delay: 0.5s;
-}
-
-.delay-6 {
-  animation-delay: 0.6s;
-}
-
-.delay-7 {
-  animation-delay: 0.7s;
-}
-
-.delay-8 {
-  animation-delay: 0.8s;
-}
-*/
 .wrapBtn {
   display: flex;
   text-decoration: none;
