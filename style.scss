@@ -164,6 +164,9 @@ body {
       transform: scale(1.01);
       background-color: #9256dc21;
     }
+    &:hover i {
+      color: #9356DC; 
+    }
 
     @media (min-width: 64rem) {
       flex: 1;
