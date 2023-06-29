@@ -471,13 +471,6 @@ body {
   display: flex;
   position: relative;
 }
-.tuto__step:hover {
-  transform: scale(1.01);
-  background-color: rgba(146, 86, 220, 0.1294117647);
-}
-.tuto__step:hover i {
-  color: #9356DC;
-}
 @media (min-width: 64rem) {
   .tuto__step {
     flex: 1;
@@ -513,10 +506,6 @@ body {
   color: #7e7e7e;
   font-size: 20px;
 }
-.tuto__icon:hover {
-  color: #9356DC;
-}
-
 .card {
   background-color: white;
   border-radius: 1rem;

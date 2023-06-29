@@ -160,14 +160,8 @@ body {
     background-color: #f6f6f6;
     display: flex;
     position: relative;
-
-    &:hover {
-      transform: scale(1.01);
-      background-color: #9256dc21;
-    }
-    &:hover i {
-      color: #9356DC; 
-    }
+    
+    
 
     @media (min-width: 64rem) {
       flex: 1;
@@ -208,7 +202,7 @@ body {
     color: #7e7e7e;
     font-size: 20px;
   &:hover {
-    color: #9356DC;
+   
   }  
 
     
