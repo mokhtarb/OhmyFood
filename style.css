@@ -384,14 +384,14 @@ body {
   justify-content: space-between;
 }
 .loader__item--1 {
-  background-color: #9356DC;
+  background-color: #9356dc;
 }
 .loader__item--2 {
-  background-color: #FF79DA;
+  background-color: #ff79da;
   animation-delay: 0.25s;
 }
 .loader__item--3 {
-  background-color: #99E2D0;
+  background-color: #99e2d0;
   animation-delay: 0.5s;
 }
 
@@ -506,8 +506,12 @@ body {
   color: #7e7e7e;
   font-size: 20px;
 }
-.tuto__icon:hover {
-  color: #9356DC;
+.tuto__icon__fa-store::before {
+  color: #9356dc;
+}
+
+.fa-store {
+  color: #9356dc;
 }
 
 .card {
